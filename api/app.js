@@ -4,8 +4,8 @@ var app = express();
 // var uuid = require('node-uuid');
 var pool = require('./db');
 const port = 1337
-var pg = require('pg');
-var conString = "postgres://postgres:MasterPos1212@localhost:5432/data";
+// var pg = require('pg');
+// var conString = "postgres://postgres:MasterPos1212@localhost:5432/data";
 
 // sample routes for testing 
 
