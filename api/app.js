@@ -1,9 +1,23 @@
 var express = require('express');
 var app = express();
 var uuid = require('node-uuid');
+var pool = require('./db');
+const port = 1337
 
 var pg = require('pg');
-var conString ="postgres://postgres:MasterPos1212@localhost/data";
+var conString ="postgres://postgres:MasterPos1212@localhost:5432/data";
+
+// sample routes for testing 
+
+app.get('/' , (req,res) =>{
+  res.sendStatus(200)
+});
+
+app.get('/home', (req,res) => {
+  res.sendStatus(200)
+});
+
+
 
 // Routes
 app.get('/api/status', function(req, res) {
@@ -29,7 +43,7 @@ app.get('/api/status', function(req, res) {
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('Not Found 404');
   err.status = 404;
   next(err);
 });
@@ -58,5 +72,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
+
+app.listen(port, () => console.log(`Server is Listening to the: ${port}`))
 
 module.exports = app;
