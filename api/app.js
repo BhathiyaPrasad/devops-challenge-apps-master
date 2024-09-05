@@ -3,7 +3,7 @@ var app = express();
 var uuid = require('node-uuid');
 
 var pg = require('pg');
-var conString ="postgres://postgres:MasterPos1212@localhost/postgres";
+var conString ="postgres://postgres:MasterPos1212@localhost/data";
 
 // Routes
 app.get('/api/status', function(req, res) {

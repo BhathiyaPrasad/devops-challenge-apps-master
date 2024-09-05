@@ -8,5 +8,5 @@ api:
   command: npm start
 
   environment:
-    - PORT=${API_PORT}
-    - DB=${API_DB}
+    - PORT=3000
+    - DB="postgres://postgres:MasterPos1212@localhost/data"
