@@ -6,8 +6,9 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "~4.13.1",
-    "pg": "5.0.0",
-    "node-uuid": "1.4.7"
+    "node-uuid": "1.4.7",
+    "pg": "5.0.0"
   }
 }
