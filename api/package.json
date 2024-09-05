@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
     "express": "~4.13.1",
     "node-uuid": "1.4.7",
-    "pg": "5.0.0"
+    "pg": "^8.12.0"
   }
 }
