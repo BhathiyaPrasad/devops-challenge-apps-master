@@ -7,7 +7,7 @@ services:
      POSTGRES_USER: postgres
      POSTRES_DB: data
   app:
-    image: version-2.4  
+    image: version3.1  
     ports:
     - 13000:1337
 
