@@ -17,7 +17,7 @@ services:
 
     environment:
     
-    - API_HOST='http://app:1337/api/status'
+    - API_HOST=http://app:1337/api/status
 
 
 
