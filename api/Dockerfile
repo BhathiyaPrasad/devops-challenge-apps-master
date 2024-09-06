@@ -10,7 +10,7 @@ COPY . .
 
 ENV PORT=8080
 
-EXPOSE 3000
+EXPOSE 1337
 
 
 CMD [ "npm" , "start"]

@@ -95,6 +95,6 @@ app.use(function (err, req, res, next) {
 
 // added listening port  for confirm the process
 
-app.listen(port, () => console.log(`Server is Listening to the: ${port}`))
+app.listen(port, () => console.log(`Server is Listening`))
 
 module.exports = app;
