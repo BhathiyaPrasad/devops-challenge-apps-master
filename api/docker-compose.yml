@@ -7,9 +7,17 @@ services:
      POSTGRES_USER: postgres
      POSTGRES_DB: data
   app:
-    image: version-4.4  
+    image: version-1.1 
     ports:
     - 13000:1337
+  web:
+    image: test-1.2 
+    ports:
+    - 15000:4000
+
+    environment:
+    
+    - API_HOST='http://app:1337/api/status'
 
 
 
