@@ -1,12 +1,26 @@
-api:
-  image: node:latest
-  ports:
-    - "5000:5000"
-  volumes:
-    - ./:/app/
-  working_dir: /app
-  command: npm start
+version: "1.1"
+services:
+  db:
+    image: postgres
+    environment:
+     POSTGRES_PASSWORD: MasterPos1212
+     POSTGRES_USER: postgres
+     POSTRES_DB: data
+  app:
+    image: version-2.4  
+    ports:
+    - 13000:1337
 
-  environment:
-    - PORT=3000
-    - DB="postgres://postgres:MasterPos1212@localhost/data"
+
+
+
+
+
+
+
+
+
+
+
+
+
