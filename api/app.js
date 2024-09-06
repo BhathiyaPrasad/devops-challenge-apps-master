@@ -21,23 +21,16 @@ app.get('/home', (req, res) => {
 
 app.get('/api/status', async (req, res) => {
   try {
-    const data = await pool.query('SELECT now() as time', [], function (err, result) {
-
-    if (err){
-      return res.status(500).send('error running query')
-    }  
-      return res.json({
-        request_uuid: uuidv4(),
-        time: result.rows[0].time
-      })
-    })
+    const result = await pool.query('SELECT now() as time');
+    return res.json({
+      request_uuid: uuidv4(),
+      time: result.rows[0].time
+    });
   } catch (err) {
-    console.log(err)
-    res.sendStatus(500);
+    console.error('Error running query:', err);
+    return res.status(500).send('Error running query');
   }
-
-})
-
+});
 
 // Routes
 // app.get('/api/status/test', function (req, res) {
