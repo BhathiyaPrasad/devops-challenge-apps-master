@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 
 
-var api_url = process.env.API_HOST + '/api/status';
+var api_url ='http://localhost:13000/api/status';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
