@@ -5,9 +5,9 @@ services:
     environment:
      POSTGRES_PASSWORD: MasterPos1212
      POSTGRES_USER: postgres
-     POSTRES_DB: data
+     POSTGRES_DB: data
   app:
-    image: version3.1  
+    image: version-4.4  
     ports:
     - 13000:1337
 
