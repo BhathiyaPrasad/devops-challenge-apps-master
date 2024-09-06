@@ -22,6 +22,10 @@ app.get('/home', (req, res) => {
 app.get('/api/status', async (req, res) => {
   try {
     const data = await pool.query('SELECT now() as time', [], function (err, result) {
+
+    if (err){
+      return res.status(500).send('error running query')
+    }  
       return res.json({
         request_uuid: uuidv4(),
         time: result.rows[0].time
