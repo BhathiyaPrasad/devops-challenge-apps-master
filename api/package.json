@@ -7,7 +7,7 @@
     "dev": "nodemon app.js"
   },
   "dependencies": {
-    "express": "~4.13.1",
+    "express": "~4.20.0",
     "node-uuid": "1.4.7",
     "pg": "^8.12.0",
     "uuid": "^10.0.0"
